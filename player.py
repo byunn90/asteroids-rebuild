@@ -1,3 +1,8 @@
+import pygame
+from constants import *
+from circleshape import CircleShape
+
+
 
 class Player(CircleShape):
    def __init__(self, x, y):
@@ -11,5 +16,6 @@ class Player(CircleShape):
     b = self.position - forward * self.radius - right
     c = self.position - forward * self.radius + right
     return [a, b, c]
+
    def draw(self, screen):
-    pygame.draw.polygon(self.triangle(), color=(255, 255, 255), points, 2)
+    pygame.draw.polygon(screen, "white", self.triangle(), 2)
