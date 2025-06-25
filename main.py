@@ -38,9 +38,10 @@ def main():
         for asteroid in asteroids:
            for bullet in shot:
              if asteroid.collides_with(bullet):
-                asteroid.kill()
+                asteroid.split()
                 bullet.kill() 
-                
+ 
+
         updatable.update(dt)
 
         screen.fill("black")
